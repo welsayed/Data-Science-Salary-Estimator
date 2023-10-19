@@ -1,9 +1,9 @@
 # Data Science Salary Estimator: Overview
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
-* Scraped over 1000 job descriptions from glassdoor using python and selenium
-* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
-* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
-* Built a client facing API using flask 
+* Developed a salary estimation tool (with an MAE of approximately $11,000) to assist data scientists in optimizing their income negotiations upon securing a job position.
+* Conducted web scraping of more than 1000 job descriptions from Glassdoor, employing Python and Selenium.
+* Engineered key features extracted from the textual content of each job description, enabling the quantification of the importance companies place on skills such as Python, Excel, AWS, and Spark.
+* Employed GridsearchCV to fine-tune and optimize Linear, Lasso, and Random Forest Regressors, ultimately achieving the best-performing model.
+* Constructed a user-friendly client-facing API utilizing Flask for seamless accessibility.
 
 ## Code and Resources Used 
 **Python Version:** 3.7  
