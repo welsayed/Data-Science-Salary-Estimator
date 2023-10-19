@@ -57,22 +57,23 @@ I looked at the distributions of the data and the value counts for the various c
 
 ## Model Building 
 
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+The data transformation process included the conversion of categorical variables into dummy variables. Additionally, the dataset was split into training and test sets, with a test size of 20%.  
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+Three different models were explored and evaluated using Mean Absolute Error (MAE), chosen for its interpretability and resilience to outliers:
 
-I tried three different models:
-*	**Multiple Linear Regression** – Baseline for the model
-*	**Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-*	**Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit. 
+*	**Multiple Linear Regression** – Used as a baseline model.
+*	**Lasso Regression** – Employed due to the presence of sparse data resulting from numerous categorical variables, with an expectation that this normalized regression approach would be effective.
+*	**Random Forest** – Selected as a model option to address the data's sparsity, leveraging its capability to handle complex relationships and potentially improve predictive accuracy.
 
 ## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets. 
+The Random Forest model's superior performance on both the test and validation sets indicates that it was the most effective model for this specific task. This result suggests that Random Forest was better at capturing the underlying patterns and relationships within the data, making it a strong choice for estimating salaries based on the features extracted from job listings. It's important to recognize and embrace such successful model outcomes, as they can lead to more accurate and reliable predictions in real-world applications.
 *	**Random Forest** : MAE = 11.22
 *	**Linear Regression**: MAE = 18.86
 *	**Ridge Regression**: MAE = 19.67
 
 ## Productionization 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
+During the productionization phase, a Flask API endpoint was developed and hosted on a local web server. This API endpoint is designed to accept incoming requests containing a list of values extracted from a job listing. Upon receiving such a request, the API calculates and returns an estimated salary based on the provided input data.
+
+This productionization step makes the salary estimation model accessible through a web-based interface, allowing users to obtain estimated salary figures for job listings by sending their relevant details to the API.
 
 
