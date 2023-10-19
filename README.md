@@ -14,40 +14,39 @@
 **Flask Productionization:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
 ## Web Scraping
-Tweaked the web scraper github repo (above) to scrape 1000 job postings from glassdoor.com. With each job, we got the following:
-*	Job title
-*	Salary Estimate
-*	Job Description
-*	Rating
-*	Company 
-*	Location
-*	Company Headquarters 
-*	Company Size
-*	Company Founded Date
-*	Type of Ownership 
-*	Industry
-*	Sector
-*	Revenue
-*	Competitors 
+Enhanced the web scraper GitHub repository (mentioned earlier) to extract data from 1000 job listings on Glassdoor.com. For each job posting, the following information was collected:
+* Job Title
+* Salary Estimate
+* Job Description
+* Rating
+* Company
+* Location
+* Company Headquarters
+* Company Size
+* Company Founded Date
+* Type of Ownership
+* Industry
+* Sector
+* Revenue
+* Competitors
 
 ## Data Cleaning
-After scraping the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
-
-*	Parsed numeric data out of salary 
-*	Made columns for employer provided salary and hourly wages 
-*	Removed rows without salary 
-*	Parsed rating out of company text 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
-*	Made columns for if different skills were listed in the job description:
-    * Python  
-    * R  
-    * Excel  
-    * AWS  
-    * Spark 
-*	Column for simplified job title and Seniority 
-*	Column for description length 
+Following the data scraping, a series of data cleaning and transformation steps were undertaken, resulting in the creation of the following variables and changes:
+* Extracted numeric data from the salary information.
+* Introduced new columns to distinguish between employer-provided salaries and hourly wages.
+* Removed rows lacking salary information.
+* Extracted and parsed the company's rating from the company text.
+* Added a new column to identify the state where the company is located.
+* Included a column indicating if the job was located at the company's headquarters.
+* Transformed the company's founding date into the age of the company.
+* Introduced separate columns for different skills mentioned in the job description:
+   * Python
+   * R
+   * Excel
+   * AWS
+   * Spark
+* Created columns for a simplified job title and seniority level.
+* Added a column to represent the length of the job description.
 
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
