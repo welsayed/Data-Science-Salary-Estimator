@@ -1,1 +1,1 @@
-# Data-Science-Salary-Estimator: Overview
+# Data Science Salary Estimator: Overview
